@@ -1,0 +1,7 @@
+venv/
+data/Gympass.xlsx
+data/Totalpass.xlsx
+assets/relatorio_marco_2026.pdf
+__pycache__/
+*.pyc
+.streamlit/

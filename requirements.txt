@@ -1,0 +1,14 @@
+defusedxml==0.7.1
+et_xmlfile==2.0.0
+fonttools==4.62.1
+fpdf2==2.8.7
+numpy==2.4.4
+openpyxl==3.1.5
+pandas==3.0.2
+pillow==12.2.0
+python-dateutil==2.9.0.post0
+six==1.17.0
+tzdata==2026.1
+streamlit>=1.56.0
+plotly>=5.0.0
+scikit-learn>=1.0.0
