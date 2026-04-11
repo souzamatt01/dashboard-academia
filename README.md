@@ -66,7 +66,7 @@ Clusters definidos com base na régua de repasse:
 
 ```bash
 # Clone o repositório
-git clone https://github.com/souzamatt01/academia-dashboard.git
+git clone https://github.com/souzamatt01/dashboard-academia.git
 cd academia-dashboard
 
 # Crie o ambiente virtual
