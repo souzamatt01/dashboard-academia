@@ -127,7 +127,11 @@ st.caption("Gympass · Totalpass · Análise de frequência e repasse")
 st.divider()
 
 # ── KPI CARDS — LINHA 1: VISÃO GERAL ─────────────────────────
-total_clientes = df["Cliente"].nunique()
+total_clientes = (
+    df.groupby("Plataforma")["Cliente"]
+    .nunique()
+    .sum()
+)
 total_checkins = df["Visitas"].sum()
 media_visitas = round(df["Visitas"].mean(), 1)
 teto_atingido = (df["Visitas"] >= 13).sum()
