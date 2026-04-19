@@ -90,6 +90,7 @@ O relatório PDF é gerado pelo botão dentro do próprio dashboard, sem necessi
 
 ## Estrutura do projeto
 
+```
 dashboard-academia/
 ├── data/
 │   ├── Gympass_anonimizado.xlsx
@@ -101,6 +102,7 @@ dashboard-academia/
 ├── anonimizar.py
 ├── requirements.txt
 └── README.md
+```
 
 ---
 
