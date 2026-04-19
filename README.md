@@ -1,5 +1,7 @@
 # Academia Dashboard — Análise de Parcerias Gympass & Totalpass
 
+🔗 **[Acesse o dashboard ao vivo](https://dashboard-academia-crx47cqwjgrjbpwmxjduti.streamlit.app/)**
+
 Dashboard interativo com relatório executivo em PDF para análise de frequência e repasse de academias parceiras do Gympass e Totalpass.
 
 Desenvolvido como projeto de consultoria de dados com foco em KPIs financeiros e tomada de decisão para gestores.
