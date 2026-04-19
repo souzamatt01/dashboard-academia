@@ -1,6 +1,6 @@
 # Academia Dashboard — Análise de Parcerias Gympass & Totalpass
 
-Dashboard interativo e relatório executivo para análise de frequência e repasse de academias parceiras do Gympass e Totalpass.
+Dashboard interativo com relatório executivo em PDF para análise de frequência e repasse de academias parceiras do Gympass e Totalpass.
 
 Desenvolvido como projeto de consultoria de dados com foco em KPIs financeiros e tomada de decisão para gestores.
 
@@ -32,20 +32,23 @@ Transformar os dados brutos de check-in das plataformas de parceria em insights 
 - Tabela de clientes priorizados por maior potencial de ganho
 
 ### Relatório executivo em PDF
-- Gerado automaticamente via script Python
-- KPIs consolidados, tabela de clusters e hipótese de conversão
-- Recomendação estratégica baseada nos dados do mês
+- Gerado diretamente pelo dashboard com um clique
+- KPIs consolidados, tabela de clusters e hipótese de conversão por cenário
+- Alertas automáticos baseados nos dados do mês
+- Ranking dos top 10 clientes por frequência
+- Rodapé com identificação do consultor responsável
 
 ---
 
 ## Regras de negócio implementadas
 
-| Plataforma | Valor por check-in | Check-in complementar | Teto de repasse |
-|------------|-------------------|----------------------|-----------------|
-| Gympass    | R$ 16,27 (até 12º) | R$ 0,06 (13º)       | R$ 195,30       |
-| Totalpass  | R$ 16,01 (até 12º) | R$ 15,97 (13º)      | R$ 208,09       |
+| Plataforma | Valor por check-in | Teto de repasse |
+|------------|-------------------|-----------------|
+| Gympass    | R$ 16,27 (até 12º) | R$ 195,30      |
+| Totalpass  | R$ 16,01 (até 12º) | R$ 208,09      |
 
 Clusters definidos com base na régua de repasse:
+
 - **Baixo (1–6):** menos da metade do caminho para o teto
 - **Intermediário (7–12):** gerando valor mas abaixo do teto
 - **Teto atingido (13+):** repasse máximo garantido
@@ -67,7 +70,7 @@ Clusters definidos com base na régua de repasse:
 ```bash
 # Clone o repositório
 git clone https://github.com/souzamatt01/dashboard-academia.git
-cd academia-dashboard
+cd dashboard-academia
 
 # Crie o ambiente virtual
 python -m venv venv
@@ -79,27 +82,25 @@ pip install -r requirements.txt
 
 # Rode o dashboard
 streamlit run app.py
-
-# Gere o relatório PDF
-python relatorio.py
 ```
+
+O relatório PDF é gerado pelo botão dentro do próprio dashboard, sem necessidade de rodar scripts separados.
 
 ---
 
 ## Estrutura do projeto
 
-    academia-dashboard/
-    ├── data/
-    │   ├── Gympass_anonimizado.xlsx
-    │   └── Totalpass_anonimizado.xlsx
-    ├── pages/
-    │   └── 1_Simulador.py
-    ├── assets/
-    ├── app.py
-    ├── relatorio.py
-    ├── anonimizar.py
-    ├── requirements.txt
-    └── README.md
+dashboard-academia/
+├── data/
+│   ├── Gympass_anonimizado.xlsx
+│   └── Totalpass_anonimizado.xlsx
+├── pages/
+│   └── 1_Simulador.py
+├── app.py
+├── relatorio.py
+├── anonimizar.py
+├── requirements.txt
+└── README.md
 
 ---
 

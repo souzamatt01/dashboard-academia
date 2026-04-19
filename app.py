@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from pathlib import Path
+from relatorio import gerar_pdf
 
 st.set_page_config(
     page_title="Academia Dashboard",
@@ -315,3 +316,20 @@ st.dataframe(
     use_container_width=True,
     height=350
 )
+
+# ── RELATÓRIO PDF ─────────────────────────────────────────────
+st.divider()
+st.markdown("#### Relatório Executivo")
+
+if st.button("📄 Gerar Relatório PDF"):
+    pdf_bytes = gerar_pdf(
+        all_visits,
+        nome_academia="[Nome da Academia]",
+        mes_ref="Março 2026",
+    )
+    st.download_button(
+        label="⬇️ Baixar PDF",
+        data=pdf_bytes,
+        file_name="relatorio_parcerias_marco2026.pdf",
+        mime="application/pdf",
+    )
